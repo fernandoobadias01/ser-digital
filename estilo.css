@@ -17,6 +17,9 @@ body {
     max-width: 67.25rem;
     margin: auto;
 }
+.imagen{
+    text-align: center;
+}
 .hero_title{
     margin-top: 0;
 }
@@ -41,14 +44,6 @@ a {
 
 nav a {
     text-decoration: none;
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
 }
 
 .header {
@@ -121,7 +116,7 @@ img {
 
 .footer {
     background-color: var(--gray);
-    padding: 3rem 0;
+
 }
 
 .footer ul {
@@ -174,6 +169,44 @@ img {
 }
 
 @media screen and (min-width: 46.25em){
+    body{
+        text-align: left;
+    }
+    h1 {
+    font-size: 3.625rem;
+}
+    h2 {
+    font-size: 2.875rem;
+}
+    .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .header-menu{
+    display: block;
+    margin: 0;
+    }
+    .header-menu li{
+    display: inline-block;
+    margin-left: 1.75rem;
+    }
+    .header-menu a{
+        padding: 1rem;
+    }
+    .testemunho{
+        display: flex;
+        
+        gap: 1rem;
+    }
+    .testemunho_thumb{
+        width: 8.125rem;
+        height: 8.125rem;
+    }
+    .contato_image{
+        display: block;
+        text-align: center;
+    }
     .row{
         gap: 1rem;
     }
@@ -197,6 +230,14 @@ img {
     }
 }
 @media screen and (min-width: 90cm){
+    .hero_title{
+        margin-bottom: 6.25rem;
+    }
+    .testemunho{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
       .row{
         gap: 3rem;
     }
@@ -209,5 +250,17 @@ img {
     
     .row > .lg-6{
         grid-column: span 6;
+    }
+    .row > .lg-7{
+        grid-column: span 7;
+    }
+    .lg-1-5{
+        grid-column: 1 / 6;
+    }
+    .lg-1-7{
+        grid-column: 1 / 8;
+    }
+    .lg-8-12{
+        grid-column: 8 / 13;
     }
 }
