@@ -33,7 +33,7 @@ body {
     padding: 0;
     text-align: right;
 
-    display: none;
+    /* display: none; */
 }
 
 .header-menu a {
@@ -183,11 +183,11 @@ img {
 }
 .icons li{
     display: inline-block;
-    margin-left: 1rem;
+   
     font-size: 2rem;
 }
 .icons li + li{
-    display: inline-block;
+    margin-left: 1rem;
 }
 @container testemunhocard (min-widht: 42.187em){
     .testemunho_card{
@@ -210,12 +210,16 @@ img {
     font-size: 2.875rem;
 }
     .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        align-items: center;
     }
+
+    .menu-btn, 
+    .menu-icon{
+        display: none;
+    }
+    
     .header-menu{
-    display: block;
+    /* display: block; */
     margin: 0;
     }
     .header-menu li{
@@ -286,4 +290,61 @@ img {
     .lg-8-12{
         grid-column: 8 / 13;
     }
+}
+
+/* aburguer-menu */
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-menu{
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+@media screen and (min-width:46.25em ){
+    .header-menu{
+        position: static;
+        max-height: linear;
+        background-color: initial;
+    }
+}
+.header nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.menu-icon {
+    position: relative;
+    cursor: pointer;
+    /* user-select: none; */
+}
+
+.nav-icon{
+    background-color: #333;
+    display: inline-block;
+    height: 2px;
+    width: 24px;
+}
+.nav-icon::after,
+.nav-icon::before {
+    content: "";
+    background-color: #333;
+    display: inline-block;
+    height: 7px;
+    width: 24px;
+    position: absolute;
+}
+
+.nav-icon::after{
+    transform: translateY(8px);
+}
+.nav-icon::before {
+    background-color: red;
+    transform: translateY(-8px);
 }
