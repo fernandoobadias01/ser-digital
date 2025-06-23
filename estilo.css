@@ -36,9 +36,12 @@ body {
     /* display: none; */
 }
 
+.header-menu li{
+    padding: 1.75em 0;
+}
 .header-menu a {
     display: block;
-    padding: 2em 0;
+    padding: 1.75em 0;
 
 }
 
@@ -305,6 +308,14 @@ img {
     max-height: 0;
     overflow: hidden;
     background-color: white;
+    transition: max-height .3s;
+    margin: 0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.menu-btn:checked ~ .header-menu{
+    max-height: 100vh;
 }
 
 @media screen and (min-width:46.25em ){
