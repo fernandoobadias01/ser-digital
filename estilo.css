@@ -317,6 +317,9 @@ img {
 .menu-btn:checked ~ .header-menu{
     max-height: 100vh;
 }
+/* .menu-btn:checked+.menu-icon .nav-icon{
+
+} */
 
 @media screen and (min-width:46.25em ){
     .header-menu{
